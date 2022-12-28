@@ -9,9 +9,11 @@
 #pragma warning( push )
 #pragma warning( disable : 4244 )
 #include "krabs.hpp"
+using namespace krabs;
 #pragma warning( pop )
 
-using namespace krabs;
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
 
 int main
 (
@@ -22,6 +24,13 @@ int main
     UNREFERENCED_PARAMETER(argc);
     UNREFERENCED_PARAMETER(argv);
     int status = 0;
+
+    json j = json::parse(R"(
+      {
+        "status": 0,
+      }
+    )");
+    status = j["status"];
 
     // Kernel traces use the kernel_trace class, which looks and acts a lot like the
     // user_trace class.
