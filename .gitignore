@@ -1,0 +1,11 @@
+.vs/
+.vscode/
+x64/
+packages/
+etwrunner/x64
+*.vcxproj.user
+
+# Some testing might create this file:
+out.json
+run.bat
+config.json

@@ -1,0 +1,7 @@
+[submodule "krabsetw"]
+	path = krabsetw
+	url = https://github.com/microsoft/krabsetw.git
+	branch = master
+[submodule "json"]
+	path = json
+	url = https://github.com/nlohmann/json.git
